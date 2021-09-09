@@ -1,0 +1,28 @@
+{
+  "name": "apollo-gql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "concurrently -k npm:server:*",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:user": "nodemon src/users/index.js",
+    "server:gateway": "wait-on tcp:4001 && nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.31.0",
+    "@apollo/gateway": "^0.40.0",
+    "apollo-server": "^3.3.0",
+    "apollo-server-core": "^3.3.0",
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.1",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.5.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.5",
+    "wait-on": "^6.0.0"
+  }
+}
